@@ -1,5 +1,9 @@
+using HT_BLL.Interfaces;
+using HT_BLL.Models;
+using HT_BLL.Services;
 using HT_DAL.Interfaces;
 using HT_DAL.Repositories;
+using HT_DAL.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,6 +41,8 @@ namespace HomeTwistApi
 
             //DI
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<IBusinessCustomer<BusinessCustomer>, CustomerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

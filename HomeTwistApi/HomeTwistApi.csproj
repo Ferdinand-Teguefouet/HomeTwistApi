@@ -9,12 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Ht_BLL\HT_BLL.csproj" />
     <ProjectReference Include="..\HT_DAL\HT_DAL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Tools\" />
   </ItemGroup>
 
 </Project>
